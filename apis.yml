@@ -1,8 +1,27 @@
 aid: kiva-systems-amazon-robotics-since-2012
 name: Kiva Systems (Amazon Robotics since 2012)
-description: 'Kiva Systems (Amazon Robotics since 2012) is a company surfaced as a portfolio company of
-  bain-capital-ventures and added to the API Evangelist network as a stub for enrichment. Sector: physical-ai.
-  This profile is a lead awaiting the enrichment pipeline.'
+description: 'Kiva Systems was a warehouse robotics company founded in 2003 that pioneered the goods-to-person
+  mobile fulfillment model, in which fleets of low-profile drive units lift and carry mobile storage pods
+  to human pick stations instead of moving workers to static shelving. Amazon acquired Kiva Systems in
+  March 2012 for approximately US$775 million and renamed it Amazon Robotics in 2015. Since the acquisition
+  the technology has been developed exclusively for Amazon''s own fulfillment and sortation network and
+  is no longer sold to third parties. Amazon Robotics publishes no public API, developer portal or SDKs;
+  amazonrobotics.com now redirects to Amazon''s internal identity provider and kivasystems.com no longer
+  resolves. This profile is retained as a historical and acquisition record in the physical-AI and warehouse-robotics
+  space rather than as an integratable API provider. Not to be confused with AWS RoboMaker or AWS IoT
+  RoboRunner, which are AWS product APIs.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://static.amazon.jobs/global_images/2/images/Jobs_thumbnailV2.jpg
 url: https://raw.githubusercontent.com/api-evangelist/kiva-systems-amazon-robotics-since-2012/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +29,22 @@ x-backed-by:
 - bain-capital-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-api-surface: none
+x-api-surface-note: No public API, developer portal, SDKs or event surface. Verified 2026-07-19.
+x-acquired-by: amazon
+x-acquired-date: '2012-03'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Physical Ai
+- Robotics
+- Warehouse Automation
+- Fulfillment
+- Logistics
+- Acquisition
+- Amazon
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +54,26 @@ maintainers:
 common:
 - type: Website
   url: https://www.amazon.jobs/en/teams/amazon-robotics
+- type: Blog
+  url: https://www.aboutamazon.com/news/operations
+- type: Research
+  url: https://www.amazon.science/research-areas/robotics
+- type: Learning
+  url: https://learning.robotics.amazon.dev/
+- type: DomainSecurity
+  url: security/kiva-systems-amazon-robotics-since-2012-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/kiva-systems-amazon-robotics-since-2012-vulnerability-disclosure.yml
+- type: Security
+  url: security/kiva-systems-amazon-robotics-since-2012-vulnerability-disclosure.yml
+- type: SecurityTxt
+  url: well-known/kiva-systems-amazon-robotics-since-2012-security.txt
+- type: WellKnown
+  url: well-known/kiva-systems-amazon-robotics-since-2012-well-known.yml
+- type: LLMsTxt
+  url: llms/kiva-systems-amazon-robotics-since-2012-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
