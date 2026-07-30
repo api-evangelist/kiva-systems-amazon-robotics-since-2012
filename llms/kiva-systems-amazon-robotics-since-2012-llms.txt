@@ -1,0 +1,62 @@
+# Kiva Systems (Amazon Robotics since 2012)
+
+> Kiva Systems was a warehouse robotics company founded in 2003 that pioneered the
+> goods-to-person mobile fulfillment model, in which fleets of low-profile drive units
+> lift and carry mobile storage pods to human pick stations rather than moving workers to
+> static shelving. Amazon acquired Kiva Systems in March 2012 for approximately US$775
+> million and renamed it Amazon Robotics in 2015. Since the acquisition the technology has
+> been developed exclusively for Amazon's own fulfillment and sortation network and is no
+> longer sold to third parties.
+
+## Status for API consumers
+
+- Amazon Robotics publishes **no public API, no developer portal, and no SDKs**. There is
+  no OpenAPI, AsyncAPI, GraphQL, gRPC or MCP surface to integrate against.
+- `amazonrobotics.com` is no longer a public marketing site; requests redirect to Amazon's
+  internal federated identity provider and return HTTP 403 to the public internet.
+- `kivasystems.com` no longer resolves.
+- The robotics control plane, fleet management software and warehouse execution systems
+  are internal Amazon systems. Any APIs are private to Amazon.
+- Do not confuse Amazon Robotics with **AWS RoboMaker** (a separate, now-discontinued AWS
+  service) or with **AWS IoT RoboRunner**. Those are AWS product APIs and belong to the
+  `aws` provider profile, not to this one.
+
+## Public surfaces
+
+- [Amazon Robotics team page](https://www.amazon.jobs/en/teams/amazon-robotics): the
+  primary public page for the division — mission, greater-Boston locations, open roles.
+- [Fulfillment Technology and Robotics](https://amazon.jobs/content/en/teams/ftr): the
+  wider Amazon org that Amazon Robotics sits inside.
+- [Amazon Science — Robotics research area](https://www.amazon.science/research-areas/robotics):
+  published papers and research from Amazon's robotics scientists.
+- [About Amazon — Operations news](https://www.aboutamazon.com/news/operations): corporate
+  announcements covering robotics deployments across the fulfillment network.
+- [Global Robotics University](https://learning.robotics.amazon.dev/): Amazon's public
+  robotics learning site.
+
+## Security
+
+- Amazon Robotics publishes no `security.txt` of its own. Vulnerability intake runs
+  through the parent company program: the **Amazon Vulnerability Research Program** on
+  HackerOne (`https://hackerone.com/amazonvrp`), declared in
+  `https://www.amazon.com/.well-known/security.txt`.
+- AWS vulnerabilities use a separate intake:
+  `https://aws.amazon.com/security/vulnerability-reporting/`.
+
+## Artifacts in this profile
+
+- `well-known/kiva-systems-amazon-robotics-since-2012-well-known.yml` — probe results for
+  every `/.well-known/` path across the Amazon Robotics and parent hosts, with statuses.
+- `well-known/kiva-systems-amazon-robotics-since-2012-security.txt` — the parent-company
+  `security.txt`, saved verbatim.
+- `security/kiva-systems-amazon-robotics-since-2012-vulnerability-disclosure.yml` — the
+  Amazon VRP disclosure program, scoped as parent-company.
+- `security/kiva-systems-amazon-robotics-since-2012-domain-security.yml` — TLS, HSTS,
+  DNSSEC, CAA, SPF and DMARC probe results for the public host.
+
+## Notes
+
+This profile entered the API Evangelist network as a venture-portfolio lead (Bain Capital
+Ventures was an investor in Kiva Systems before the Amazon acquisition). It is retained as
+a historical and acquisition record in the physical-AI and warehouse-robotics space rather
+than as an integratable API provider.

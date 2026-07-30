@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Amazon Robotics public hosts and the Amazon.com parent host
+notes: >-
+  Amazon Robotics (formerly Kiva Systems, acquired by Amazon in March 2012) operates no
+  public developer host. amazonrobotics.com now redirects to Amazon's internal federated
+  identity provider (403 to idp.federate.amazon.com) and kivasystems.com no longer
+  resolves. The only public Amazon Robotics surfaces are Amazon-owned marketing, careers
+  and research pages. The single /.well-known/ hit below is served by the parent company
+  host (www.amazon.com) and is recorded with explicit parent-company scope.
+probes:
+- host: www.amazon.jobs
+  path: /.well-known/security.txt
+  status: 404
+  file: null
+- host: www.aboutamazon.com
+  path: /.well-known/security.txt
+  status: 404
+  file: null
+- host: www.amazon.com
+  path: /.well-known/security.txt
+  status: 200
+  scope: parent-company
+  file: kiva-systems-amazon-robotics-since-2012-security.txt
+- host: www.amazon.com
+  path: /.well-known/openid-configuration
+  status: 503
+  file: null
+- host: www.amazon.com
+  path: /.well-known/oauth-authorization-server
+  status: 404
+  file: null
+- host: www.amazon.com
+  path: /.well-known/api-catalog
+  status: 503
+  file: null
+- host: www.amazon.com
+  path: /.well-known/ai-plugin.json
+  status: 404
+  file: null
+- host: amazonrobotics.com
+  path: /
+  status: 403
+  note: redirects to Amazon internal federated auth (no public site)
+  file: null
+- host: kivasystems.com
+  path: /
+  status: 000
+  note: does not resolve
+  file: null
