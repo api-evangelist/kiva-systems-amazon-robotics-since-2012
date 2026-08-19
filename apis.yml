@@ -33,7 +33,7 @@ x-api-surface: none
 x-api-surface-note: No public API, developer portal, SDKs or event surface. Verified 2026-07-19.
 x-acquired-by: amazon
 x-acquired-date: '2012-03'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
