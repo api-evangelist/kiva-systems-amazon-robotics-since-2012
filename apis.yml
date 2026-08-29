@@ -10,6 +10,17 @@ description: 'Kiva Systems was a warehouse robotics company founded in 2003 that
   resolves. This profile is retained as a historical and acquisition record in the physical-AI and warehouse-robotics
   space rather than as an integratable API provider. Not to be confused with AWS RoboMaker or AWS IoT
   RoboRunner, which are AWS product APIs.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
