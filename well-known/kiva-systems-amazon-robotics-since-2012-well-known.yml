@@ -1,13 +1,11 @@
 generated: '2026-07-19'
 method: searched
 source: live probes of Amazon Robotics public hosts and the Amazon.com parent host
-notes: >-
-  Amazon Robotics (formerly Kiva Systems, acquired by Amazon in March 2012) operates no
-  public developer host. amazonrobotics.com now redirects to Amazon's internal federated
-  identity provider (403 to idp.federate.amazon.com) and kivasystems.com no longer
-  resolves. The only public Amazon Robotics surfaces are Amazon-owned marketing, careers
-  and research pages. The single /.well-known/ hit below is served by the parent company
-  host (www.amazon.com) and is recorded with explicit parent-company scope.
+notes: Amazon Robotics (formerly Kiva Systems, acquired by Amazon in March 2012) operates no public developer
+  host. amazonrobotics.com now redirects to Amazon's internal federated identity provider (403 to idp.federate.amazon.com)
+  and kivasystems.com no longer resolves. The only public Amazon Robotics surfaces are Amazon-owned marketing,
+  careers and research pages. The single /.well-known/ hit below is served by the parent company host
+  (www.amazon.com) and is recorded with explicit parent-company scope.
 probes:
 - host: www.amazon.jobs
   path: /.well-known/security.txt
@@ -45,6 +43,19 @@ probes:
   file: null
 - host: kivasystems.com
   path: /
-  status: 000
+  status: 0
   note: does not resolve
   file: null
+hosts:
+- host: ''
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: kiva-systems-amazon-robotics-since-2012-security.txt
+x-shape-fix:
+  converted: '2026-08-20'
+  from: probes
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent. Promoted ONLY the 2xx rows out of
+    the probe log; non-2xx probes are real negative results and were left in place, not converted into
+    documents.
